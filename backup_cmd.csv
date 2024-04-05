@@ -1,0 +1,18 @@
+ter le 0
+show ver
+show run
+show ip int br
+show int
+show int status
+sh int des
+sh ip route
+sh ip route summ
+sh cdp ne
+sh cdp ne de
+sh ip eigrp nei
+sh ip eigrp to
+sh ip eigrp to all
+sh diag
+sh inv
+sh access-list
+ter no le
