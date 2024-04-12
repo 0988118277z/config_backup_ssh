@@ -14,10 +14,10 @@ def auto_cisco_backup(ip, port, user, passwd, enablepasswd):
     time.sleep(.5)
     chan.send('en\n')
     chan.send(enablepasswd+'\n')
-    time.sleep(1)
+    time.sleep(.5)
     for cmd in cmds:
         chan.send(cmd+'\n')
-        time.sleep(2)
+        time.sleep(1)
         
     outputs = chan.recv(99999)
     with open(f"{ip}_{datetime.now().strftime('%Y%m%d')}.txt", 'a+') as f:
@@ -25,6 +25,7 @@ def auto_cisco_backup(ip, port, user, passwd, enablepasswd):
     
     print('backup success')
     client.close()
+    return
     
 ip = input('ip = ')
 user = input('user = ')
